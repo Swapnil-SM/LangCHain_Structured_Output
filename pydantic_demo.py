@@ -1,6 +1,6 @@
 from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
-import email_validator
+
 
 class Student(BaseModel):
 
