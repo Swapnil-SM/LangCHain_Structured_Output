@@ -21,4 +21,4 @@ student_dict = dict(student)  # converting pydantic model to dictionary
 
 print(student_dict['age']) 
 
-student_json = student.model_dump_json()
+student_json = student.model_dump_json()  # converting pydantic model to json
