@@ -3,7 +3,7 @@
 student_schema = {
     "title": "student",                # Title or name of the schema
     "description": "Schema about students",  # Short info about what this schema represents
-    "type": "object",                  # Defines that the data must be a JSON object
+    "type": "object",                  # Defines that the data must be a JSON object(array,List etc)
     "properties": {                    # Lists all possible keys (fields) and their expected types
         "name": { "type": "string" },  # 'name' must be a string value
         "age": { "type": "integer" }   # 'age' must be an integer value
