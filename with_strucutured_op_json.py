@@ -1,3 +1,5 @@
+from ast import If
+
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 from typing import TypedDict, Annotated, Optional, Literal
@@ -69,3 +71,11 @@ Review by Nitish Singh
 """)
 
 print(result)
+
+
+# When we pass a schema (BaseModel or TypedDict) to with_structured_output(), LangChain uses that schema to parse and validate the LLM's response.
+
+# If the schema is a Pydantic BaseModel, LangChain validates the response using Pydantic and returns a Pydantic object.
+# If the schema is a TypedDict, LangChain validates/parses the response and returns a Python dictionary (dict), not a string.
+
+# If we specify method="json_mode", the LLM is instructed to return its response in JSON format. LangChain then parses that JSON, validates it against the provided schema, and returns the appropriate Python object based on the schema.
