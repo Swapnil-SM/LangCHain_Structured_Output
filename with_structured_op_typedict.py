@@ -7,7 +7,7 @@ load_dotenv()
 model = ChatOpenAI()
 
 # schema
-class Review(TypedDict):
+class Review(TypedDict): # typedict returns a dictionary with fixed set of keys and values while pydantic returns a class with attr when we write Review(BaseModel);
 
     key_themes: Annotated[list[str], "Write down all the key themes discussed in the review in a list"]
     summary: Annotated[str, "A brief summary of the review"]

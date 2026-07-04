@@ -11,6 +11,8 @@ student_schema = {
     "required": ["name"]               # Fields that must be present in the JSON data
 }
 
+print(type(student_schema))  # <class 'dict'>, the schema is a Python dictionary
 # Example usage:
 import json
-print(json.dumps(student_schema, indent=2))
+print(json.dumps(student_schema, indent=2)) #json.dumps() converts the Python dictionary into a nicely formatted JSON string.
+print(type(json.dumps(student_schema, indent=2)))  # <class 'str'>, the output is a string representation of the JSON schema
